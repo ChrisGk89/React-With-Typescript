@@ -16,7 +16,7 @@ function App() {
   const [people, setPeople] = useState<IState["people"]>([
     {
       name: "Lebron James",
-      url: "",
+      url: "https://www.seekpng.com/png/full/29-293429_lebron-james-lebron-james-headshot.png",
       age: 36,
       note: "Allergic to staying in one team",
     },

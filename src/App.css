@@ -60,6 +60,7 @@
 .List-img {
   width: 4rem;
   height: 4rem;
+  padding-right: 1rem;
   border-radius: 100%;
   margin-right: 0.5rem;
 }
