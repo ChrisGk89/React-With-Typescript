@@ -45,6 +45,7 @@ const AddToList = () => {
         placeholder="Notes"
         className="AddToList-input"
         value={input.note}
+        name="note"
       />
     </div>
   );
