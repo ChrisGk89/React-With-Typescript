@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { isComputedPropertyName } from "typescript";
 import { IState as Props } from "../App";
 
 interface IProps {
@@ -6,7 +7,7 @@ interface IProps {
   setPeople: React.Dispatch<React.SetStateAction<Props["people"]>>;
 }
 
-const AddToList: React.FC<IProps> = () => {
+const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
   const [input, setInput] = useState({
     name: "",
     age: "",
@@ -23,7 +24,21 @@ const AddToList: React.FC<IProps> = () => {
     });
   };
 
-  const handleClick = (): void => {};
+  const handleClick = (): void => {
+    if (!input.name || !input.age || !input.img) {
+      return;
+    }
+
+    setPeople([
+      ...people,
+      {
+        name: input.name,
+        age: input.age,
+        img: input.img,
+        note: input.note,
+      },
+    ]);
+  };
 
   return (
     <div className="AddToList">
@@ -59,7 +74,7 @@ const AddToList: React.FC<IProps> = () => {
         name="note"
       />
 
-      <button className="AddToList-btn">onClick={handleClick}</button>
+      <button className="AddToList-btn">Add to list</button>
     </div>
   );
 };
