@@ -33,11 +33,18 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
       ...people,
       {
         name: input.name,
-        age: input.age,
-        img: input.img,
+        age: parseInt(input.age),
+        url: input.img,
         note: input.note,
       },
     ]);
+
+    setInput({
+      name: "",
+      age: "",
+      note: "",
+      img: "",
+    });
   };
 
   return (
