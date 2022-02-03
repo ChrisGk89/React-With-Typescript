@@ -8,7 +8,12 @@ const AddToList = () => {
     img: "",
   });
 
-  const handleChange = () => {};
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <div className="AddToList">
