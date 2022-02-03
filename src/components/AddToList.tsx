@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { isComputedPropertyName } from "typescript";
 import { IState as Props } from "../App";
 
 interface IProps {
@@ -58,7 +57,7 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
         name="name"
       />
       <input
-        type="text"
+        type="number"
         placeholder="Age"
         className="AddToList-input"
         value={input.age}
@@ -81,7 +80,9 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
         name="note"
       />
 
-      <button className="AddToList-btn">Add to list</button>
+      <button onClick={handleClick} className="AddToList-btn">
+        Add to list
+      </button>
     </div>
   );
 };
