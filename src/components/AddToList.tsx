@@ -17,6 +17,8 @@ const AddToList = () => {
     });
   };
 
+  const handleClick = (): void => {};
+
   return (
     <div className="AddToList">
       <input
@@ -50,6 +52,8 @@ const AddToList = () => {
         onChange={handleChange}
         name="note"
       />
+
+      <button className="AddToList-btn">onClick={handleClick}</button>
     </div>
   );
 };
