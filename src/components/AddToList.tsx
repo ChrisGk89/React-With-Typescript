@@ -8,6 +8,8 @@ const AddToList = () => {
     img: "",
   });
 
+  const handleChange = () => {};
+
   return (
     <div className="AddToList">
       <input
@@ -15,12 +17,16 @@ const AddToList = () => {
         placeholder="name"
         className="AddToList-input"
         value={input.name}
+        onChange={handleChange}
+        name="name"
       />
       <input
         type="text"
         placeholder="Age"
         className="AddToList-input"
         value={input.age}
+        onChange={handleChange}
+        name="name"
       />
       <input
         type="text"
