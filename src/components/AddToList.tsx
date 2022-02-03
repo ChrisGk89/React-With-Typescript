@@ -8,7 +8,9 @@ const AddToList = () => {
     img: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setInput({
       ...input,
       [e.target.name]: e.target.value,
@@ -45,6 +47,7 @@ const AddToList = () => {
         placeholder="Notes"
         className="AddToList-input"
         value={input.note}
+        onChange={handleChange}
         name="note"
       />
     </div>
