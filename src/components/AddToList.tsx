@@ -26,13 +26,15 @@ const AddToList = () => {
         className="AddToList-input"
         value={input.age}
         onChange={handleChange}
-        name="name"
+        name="age"
       />
       <input
         type="text"
         placeholder="Image Url"
         className="AddToList-input"
         value={input.img}
+        onChange={handleChange}
+        name="img"
       />
       <textarea
         placeholder="Notes"
